@@ -1,0 +1,100 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+
+<style>@font-face{font-family:"Cormorant Garamond";font-weight:500;src:url(node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-normal.woff2)}@font-face{font-family:"Cormorant Garamond";font-weight:600;src:url(node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-600-normal.woff2)}@font-face{font-family:"Inter";font-weight:400;src:url(node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2)}@font-face{font-family:"Inter";font-weight:500;src:url(node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}@font-face{font-family:"Inter";font-weight:600;src:url(node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@page{size:Letter;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#252526;--soft:#5d5d60;--gold:#BEAF87;--gold-d:#8f7f55;--cream:#f7f4ee;--line:#e6e0d3}
+html,body{width:8.5in;height:11in}
+body{font-family:Inter,sans-serif;color:var(--ink);font-size:10.5pt;line-height:1.4;display:flex;flex-direction:column}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:600}
+.hero{height:3.75in;background:url(hero.jpg) center 60%/cover;position:relative}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.7))}
+.ht{position:absolute;left:.5in;right:.5in;bottom:.22in;color:#fff;z-index:1;display:flex;justify-content:space-between;align-items:flex-end}
+.tag{display:inline-block;background:var(--gold);color:var(--ink);font-size:7pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:3px 9px;margin-bottom:6px}
+.ht h1{font-size:31pt;line-height:1}
+.ht .city{font-size:11pt;opacity:.92;margin-top:3px}
+.ht .price{font-family:"Cormorant Garamond",serif;font-size:30pt;color:var(--gold);font-weight:600;line-height:1}
+.stats{background:var(--ink);color:#fff;display:grid;grid-template-columns:repeat(6,1fr);text-align:center}
+.stats div{padding:7px 0;border-right:1px solid rgba(255,255,255,.14)}
+.stats div:last-child{border:0}
+.stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:17pt;color:var(--gold);line-height:1.1}
+.stats small{font-size:6.5pt;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.main{flex:1;padding:.2in .5in 0;display:grid;grid-template-columns:1.12fr 1fr;gap:.3in}
+.eyebrow{font-size:6.8pt;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);font-weight:600}
+h2{font-size:15pt;margin:1px 0 5px;border-bottom:1.5px solid var(--gold);padding-bottom:2px}
+.intro{color:var(--soft);margin-bottom:9px}
+ul{list-style:none}
+.hl li{padding:3.2px 0 3.2px 16px;position:relative;border-bottom:1px solid var(--line)}
+.hl li:last-child{border:0}
+.hl li:before{content:"";position:absolute;left:1px;top:8px;width:6px;height:6px;border:1.5px solid var(--gold);transform:rotate(45deg)}
+dl{display:grid;grid-template-columns:auto 1fr;gap:2.2px 10px;margin-bottom:10px}
+dt{color:var(--soft)} dd{text-align:right;font-weight:500}
+.sec{margin-bottom:8px}
+.foot{margin-top:.15in;background:var(--cream);border-top:2px solid var(--gold);padding:.16in .5in;display:grid;grid-template-columns:auto 1fr auto;gap:.25in;align-items:center}
+.foot .qr{width:.95in;height:.95in;background:#fff;padding:3px}
+.foot .qr img{width:100%;height:100%}
+.foot .who h3{font-size:16pt;line-height:1}
+.foot .who p{font-size:8.6pt;color:var(--soft)}
+.foot .who .ph{font-size:11pt;color:var(--ink);font-weight:600;margin-top:3px}
+.foot .scan{font-size:8pt;color:var(--soft);text-align:right;max-width:1.9in}
+.foot .scan b{display:block;font-family:"Cormorant Garamond",serif;font-size:13pt;color:var(--ink)}
+.disc{font-size:6.6pt;color:#888;text-align:center;padding:4px .5in 6px;background:var(--cream)}
+</style></head><body>
+<div class="hero"><div class="ht">
+  <div><div class="tag">For Sale</div><h1>806 Edgewater Drive</h1><div class="city">Polk City, IA 50226 &middot; Edgewater Pointe</div></div>
+  <div class="price">$385,000</div>
+</div></div>
+<div class="stats">
+  <div><b>4</b><small>Bedrooms</small></div><div><b>3.5</b><small>Baths</small></div><div><b>1,815</b><small>Sq Ft</small></div>
+  <div><b>3</b><small>Car Garage</small></div><div><b>2003</b><small>Year Built</small></div><div><b>0.21</b><small>Acre Lot</small></div>
+</div>
+<div class="main">
+  <div>
+    <div class="eyebrow">Welcome Home</div>
+    <h2>Location, space &amp; your own backyard oasis</h2>
+    <p class="intro">Minutes from Big Creek State Park, Saylorville Lake, TCI Golf Course and Polk City's charming downtown, with an easy drive to Ames, Ankeny and Des Moines.</p>
+    <ul class="hl">
+      <li>Grand entry with vaulted ceilings &amp; sitting room</li>
+      <li>Living room with gas fireplace &amp; built-in shelving</li>
+      <li>Open dining area &amp; kitchen with pantry</li>
+      <li>Wall of windows overlooking the backyard</li>
+      <li>Above-ground pool &mdash; new filter/pump 2025, new liner 10/2026</li>
+      <li>Large deck, patio &amp; fully fenced backyard</li>
+      <li>Primary suite: vaulted ceiling, dual vanity, walk-in closet</li>
+      <li>Two more bedrooms, full bath &amp; 2nd-floor laundry upstairs</li>
+      <li>Finished lower level: family room, 4th bedroom, 3/4 bath</li>
+      <li>Mud room, central vac &amp; 3-car attached garage</li>
+    </ul>
+  </div>
+  <div>
+    <div class="sec"><div class="eyebrow">The Particulars</div><h2>Home &amp; Systems</h2>
+    <dl>
+      <dt>Style</dt><dd>Two-story, traditional</dd>
+      <dt>Bathrooms</dt><dd>2 full &middot; 1 three-qtr &middot; 1 half</dd>
+      <dt>Basement</dt><dd>819 sq ft &middot; 400 finished &middot; egress</dd>
+      <dt>Flooring</dt><dd>Hardwood, carpet, vinyl</dd>
+      <dt>Fireplace</dt><dd>Gas, direct vent</dd>
+      <dt>Heat / Cooling</dt><dd>Gas forced air / central air</dd>
+      <dt>Exterior / Roof</dt><dd>Vinyl siding / asphalt shingle</dd>
+      <dt>Water / Sewer</dt><dd>City</dd>
+      <dt>Trim</dt><dd>Oak</dd>
+      <dt>Included</dt><dd>Refrigerator, stove, microwave,<br>dishwasher, washer, dryer</dd>
+    </dl></div>
+    <div class="sec"><h2>Costs &amp; Location</h2>
+    <dl>
+      <dt>Annual Taxes</dt><dd>$6,112</dd>
+      <dt>HOA</dt><dd>None</dd>
+      <dt>School District</dt><dd>North Polk</dd>
+      <dt>Terms</dt><dd>Cash, Conventional, FHA, VA</dd>
+      <dt>MLS #</dt><dd>752223</dd>
+    </dl></div>
+  </div>
+</div>
+<div class="foot">
+  <div class="qr"><img src="qr.svg"></div>
+  <div class="who"><div class="eyebrow">Listed By</div><h3>Katie Riedeman, REALTOR&reg;</h3>
+    <p>CENTURY 21 Signature Real Estate &middot; Katie@c21sre.com</p><div class="ph">(515) 708-3115</div></div>
+  <div class="scan"><b>Scan for all 40 photos</b>plus neighborhood drive times, schools &amp; links to Zillow, Realtor.com &amp; Century 21</div>
+</div>
+<div class="disc">Information deemed reliable but not guaranteed and should be independently verified. Equal Housing Opportunity.</div>
+</body></html>
