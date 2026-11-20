@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>806 Edgewater Drive, Polk City, IA 50226 | Katie Riedeman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#252526; --soft:#5d5d60; --gold:#BEAF87; --gold-d:#8f7f55;
+    --cream:#f7f4ee; --line:#e6e0d3; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:16px}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:.2px}
+  h2{font-size:2.1rem;margin-bottom:6px}
+  .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:8px}
+  section{padding:72px 0}
+  section.alt{background:var(--cream)}
+
+  /* top bar */
+  .bar{position:sticky;top:0;z-index:20;background:rgba(37,37,38,.96);color:#fff}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:16px}
+  .brand{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600;white-space:nowrap}
+  .brand span{color:var(--gold)}
+  .nav{display:flex;gap:22px;font-size:.85rem}
+  .nav a{text-decoration:none;opacity:.85}
+  .nav a:hover{opacity:1;color:var(--gold)}
+  @media(max-width:760px){.nav{display:none}}
+  .btn{display:inline-block;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:600;font-size:.88rem;padding:10px 18px;border-radius:2px;border:0;cursor:pointer}
+  .btn:hover{background:#cfc29e}
+  .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
+  .btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .btn.dark{background:var(--ink);color:#fff}
+  .btn.dark:hover{background:#3a3a3c}
+
+  /* hero */
+  .hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:#fff;background:#333 url("img/exterior-8.jpg") center/cover no-repeat}
+  .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.72) 100%)}
+  .hero .wrap{position:relative;padding-bottom:56px;width:100%}
+  .tag{display:inline-block;background:var(--gold);color:var(--ink);font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.08}
+  .hero .city{font-size:1.1rem;opacity:.9;margin-top:6px}
+  .hero .price{font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--gold);margin-top:14px}
+  .hero .cta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+
+  /* stats */
+  .stats{background:var(--ink);color:#fff}
+  .stats .wrap{display:grid;grid-template-columns:repeat(6,1fr);text-align:center}
+  .stat{padding:22px 8px;border-right:1px solid rgba(255,255,255,.12)}
+  .stat:last-child{border-right:0}
+  .stat b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.7rem;color:var(--gold);font-weight:600}
+  .stat small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+  @media(max-width:760px){.stats .wrap{grid-template-columns:repeat(3,1fr)}.stat:nth-child(3){border-right:0}.stat:nth-child(-n+3){border-bottom:1px solid rgba(255,255,255,.12)}}
+
+  /* about */
+  .about{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:start}
+  .about p{color:var(--soft);margin-top:14px}
+  .highlights{list-style:none;border:1px solid var(--line);padding:26px 28px;background:var(--white)}
+  .highlights h3{font-size:1.4rem;margin-bottom:10px}
+  .highlights li{padding:9px 0 9px 26px;position:relative;border-bottom:1px solid var(--line);font-size:.95rem}
+  .highlights li:last-child{border-bottom:0}
+  .highlights li:before{content:"";position:absolute;left:2px;top:17px;width:10px;height:10px;border:2px solid var(--gold);transform:rotate(45deg)}
+  @media(max-width:860px){.about{grid-template-columns:1fr}}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:26px}
+  .gallery button{border:0;padding:0;cursor:zoom-in;background:#eee;aspect-ratio:3/2;overflow:hidden}
+  .gallery button.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .gallery button:hover img{transform:scale(1.04)}
+  .gallery button.hide{display:none}
+  .more{margin-top:18px;text-align:center}
+  @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+  .lb{position:fixed;inset:0;background:rgba(15,15,16,.95);z-index:50;display:none;align-items:center;justify-content:center}
+  .lb.open{display:flex}
+  .lb img{max-width:92vw;max-height:84vh;object-fit:contain}
+  .lb .x,.lb .pv,.lb .nx{position:absolute;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer;padding:12px 18px;opacity:.8}
+  .lb .x{top:10px;right:14px;font-size:2rem}
+  .lb .pv{left:8px;top:50%;transform:translateY(-50%)}
+  .lb .nx{right:8px;top:50%;transform:translateY(-50%)}
+  .lb .ct{position:absolute;bottom:18px;color:#ccc;font-size:.85rem;letter-spacing:.1em}
+
+  /* details */
+  .details{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
+  .card{background:var(--white);border:1px solid var(--line);padding:24px 26px}
+  .card h3{font-size:1.35rem;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+  .card dl{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;font-size:.92rem}
+  .card dt{color:var(--soft)}
+  .card dd{text-align:right;font-weight:500}
+  @media(max-width:860px){.details{grid-template-columns:1fr}}
+
+  /* neighborhood */
+  .hood-intro{color:var(--soft);max-width:760px;margin-top:10px}
+  .places{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:30px}
+  .group h3{font-size:1.35rem;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+  .group h3 svg{width:22px;height:22px;stroke:var(--gold-d);fill:none;stroke-width:1.7}
+  .row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .row span:last-child{color:var(--gold-d);font-weight:600;white-space:nowrap}
+  .row em{display:block;font-style:normal;color:var(--soft);font-size:.8rem}
+  .note{font-size:.8rem;color:var(--soft);margin-top:22px}
+  @media(max-width:760px){.places{grid-template-columns:1fr}}
+
+  /* links */
+  .links{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+  @media(max-width:960px){.links{grid-template-columns:repeat(2,1fr)}}
+  .link{display:flex;flex-direction:column;justify-content:space-between;gap:10px;text-decoration:none;border:1px solid var(--line);padding:22px;background:var(--white);transition:border-color .2s,transform .2s}
+  .link:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .link b{font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-weight:600}
+  .link small{color:var(--soft);font-size:.85rem}
+  .link span{color:var(--gold-d);font-weight:600;font-size:.85rem}
+  @media(max-width:760px){.links{grid-template-columns:1fr}}
+
+  /* agent */
+  .agent{background:var(--ink);color:#fff}
+  .agent .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .agent h2{color:#fff}
+  .agent p{opacity:.85;margin-top:10px}
+  .contact{border:1px solid rgba(190,175,135,.5);padding:28px}
+  .contact div{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px}
+  .contact div:last-of-type{border-bottom:0}
+  .contact small{opacity:.65;text-transform:uppercase;letter-spacing:.14em;font-size:.7rem}
+  .contact a{color:var(--gold);text-decoration:none}
+  .contact .cta a.btn{color:var(--ink);background:var(--gold);font-size:.95rem;padding:12px 22px}
+  .contact .cta a.btn:hover{background:#fff}
+  .contact .cta a.btn.ghost{background:transparent;color:#fff;border:1px solid #fff}
+  .contact .cta a.btn.ghost:hover{background:#fff;color:var(--ink)}
+  .contact .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .social{display:flex;gap:16px;margin-top:18px;font-size:.85rem}
+  .social a{color:#fff;opacity:.8}
+  @media(max-width:860px){.agent .wrap{grid-template-columns:1fr}}
+
+  footer{background:#1a1a1b;color:#aaa;font-size:.76rem;padding:26px 0;text-align:center;line-height:1.7}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="brand">Team <span>Riedeman</span></div>
+    <nav class="nav">
+      <a href="#photos">Photos</a><a href="#details">Details</a><a href="#neighborhood">Neighborhood</a><a href="#links">Links</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Schedule a Showing</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="tag">For Sale &middot; Two-Story Home</div>
+    <h1>806 Edgewater Drive</h1>
+    <div class="city">Polk City, IA 50226 &middot; Edgewater Pointe</div>
+    <div class="price">$385,000</div>
+    <div class="cta">
+      <a class="btn" href="#photos">View Photos</a>
+      <a class="btn ghost" href="#contact">Contact Katie</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>4</b><small>Bedrooms</small></div>
+    <div class="stat"><b>3.5</b><small>Baths</small></div>
+    <div class="stat"><b>1,815</b><small>Sq Ft</small></div>
+    <div class="stat"><b>3</b><small>Car Garage</small></div>
+    <div class="stat"><b>2003</b><small>Year Built</small></div>
+    <div class="stat"><b>None</b><small>HOA</small></div>
+  </div>
+</div>
+
+<section class="alt" id="about">
+  <div class="wrap about">
+    <div>
+      <div class="eyebrow">Welcome Home</div>
+      <h2>Location, space &amp; your own backyard oasis</h2>
+      <p>806 Edgewater Drive, Polk City, IA 50226 has it all! Conveniently located near Big Creek State Park, Saylorville Lake, and TCI Golf Course, you will love having outdoor recreation just minutes away, along with Polk City's charming downtown and an easy drive to Ames, Ankeny and Des Moines.</p>
+      <p>This beautiful 4 bedroom, 3.5 bathroom home welcomes you with a grand entryway featuring vaulted ceilings and a spacious sitting room. The inviting living room features a gas fireplace surrounded by built-in shelving and flows seamlessly into the dining area and kitchen, complete with a pantry. Windows cover the back side of the home allowing natural light to fill the space while also providing the perfect backyard views overlooking the large deck, well-maintained pool (new filter/pump in 2025 &amp; new liner 10/2026), fully fenced backyard and patio space perfect for entertaining and relaxing with friends and family.</p>
+      <p>Upstairs, the spacious primary suite features vaulted ceilings, a dual vanity and large walk-in closet. Two additional bedrooms, a full bathroom, and conveniently located second-floor laundry complete the upper level. The finished lower level offers even more living space with a family room, 4th bedroom and 3/4 bathroom. A large 3-car attached garage provides plenty of space for vehicles and storage.</p>
+      <p>This home allows the best of small-town living with incredible outdoor amenities and easy access to everything the Des Moines metro has to offer.</p>
+    </div>
+    <ul class="highlights">
+      <h3>Highlights</h3>
+      <li>Grand entry with vaulted ceilings &amp; sitting room</li>
+      <li>Gas fireplace with built-in shelving</li>
+      <li>Kitchen with pantry, open to dining &amp; living</li>
+      <li>Above-ground pool &mdash; new filter/pump 2025, new liner 10/2026</li>
+      <li>Large deck, patio &amp; fully fenced backyard</li>
+      <li>Primary suite with vaulted ceiling, dual vanity &amp; walk-in closet</li>
+      <li>2nd-floor laundry &mdash; washer &amp; dryer included</li>
+      <li>Finished lower level with family room, 4th bedroom &amp; 3/4 bath</li>
+      <li>3-car attached garage</li>
+    </ul>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="wrap">
+    <div class="eyebrow">Gallery</div>
+    <h2>Take a look inside</h2>
+    <div class="gallery" id="gallery"></div>
+    <div class="more"><button class="btn dark" id="moreBtn">View all <span id="count"></span> photos</button></div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-label="Photo viewer">
+  <button class="x" aria-label="Close">&times;</button>
+  <button class="pv" aria-label="Previous">&#8249;</button>
+  <img alt="">
+  <button class="nx" aria-label="Next">&#8250;</button>
+  <div class="ct"></div>
+</div>
+
+<section class="alt" id="details">
+  <div class="wrap">
+    <div class="eyebrow">Property Details</div>
+    <h2>The particulars</h2>
+    <div class="details">
+      <div class="card">
+        <h3>Home</h3>
+        <dl>
+          <dt>Type</dt><dd>Two-story, traditional</dd>
+          <dt>Bedrooms</dt><dd>4 (3 upper &middot; 1 lower)</dd>
+          <dt>Bathrooms</dt><dd>2 full &middot; 1 three-quarter &middot; 1 half</dd>
+          <dt>Living Area</dt><dd>1,815 sq ft</dd>
+          <dt>Basement</dt><dd>819 sq ft &middot; 400 finished &middot; egress windows</dd>
+          <dt>Year Built</dt><dd>2003</dd>
+          <dt>Lot</dt><dd>0.21 acre (9,375 sq ft)</dd>
+          <dt>Exterior</dt><dd>Vinyl siding</dd>
+          <dt>Roof</dt><dd>Asphalt shingle</dd>
+          <dt>Garage</dt><dd>3-car attached</dd>
+          <dt>Outdoor</dt><dd>Above-ground pool, deck, patio, wood fence</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>Interior &amp; Systems</h3>
+        <dl>
+          <dt>Flooring</dt><dd>Hardwood, carpet, vinyl</dd>
+          <dt>Fireplace</dt><dd>Gas, direct vent</dd>
+          <dt>Laundry</dt><dd>2nd floor</dd>
+          <dt>Other Rooms</dt><dd>Mud room, pantry, lower-level family room</dd>
+          <dt>Extras</dt><dd>Central vac, window treatments</dd>
+          <dt>Heat</dt><dd>Gas forced air</dd>
+          <dt>Cooling</dt><dd>Central air</dd>
+          <dt>Water / Sewer</dt><dd>City</dd>
+          <dt>Trim</dt><dd>Oak</dd>
+          <dt>Included</dt><dd>Refrigerator, stove, microwave, dishwasher, washer, dryer</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>Costs &amp; Terms</h3>
+        <dl>
+          <dt>List Price</dt><dd>$385,000</dd>
+          <dt>Price / Sq Ft</dt><dd>$212</dd>
+          <dt>Annual Taxes</dt><dd>$6,112</dd>
+          <dt>HOA</dt><dd>None</dd>
+          <dt>Subdivision</dt><dd>Edgewater Pointe</dd>
+          <dt>School District</dt><dd>North Polk</dd>
+          <dt>Terms</dt><dd>Cash, Conventional, FHA, VA</dd>
+          <dt>MLS #</dt><dd>752223</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="neighborhood">
+  <div class="wrap">
+    <div class="eyebrow">Location</div>
+    <h2>Around the neighborhood</h2>
+    <p class="hood-intro">806 Edgewater Drive sits in the Edgewater Pointe neighborhood on the south side of Polk City, a short walk from the town square and groceries and minutes from Saylorville Lake and Big Creek State Park. Here's how far it is to everyday stops and local favorites.</p>
+
+    <div class="places">
+      <div class="group">
+        <h3><svg viewBox="0 0 24 24"><path d="M12 2l5 8h-3l4 6h-5v6h-2v-6H6l4-6H7z"/></svg>Parks &amp; Outdoors</h3>
+        <div class="row"><span>Polk City Town Square<em>Park &amp; playground in downtown Polk City</em></span><span>0.6 mi &middot; ~13 min walk</span></div>
+        <div class="row"><span>Leonard Park<em>413 Parker Blvd</em></span><span>0.7 mi &middot; ~15 min walk</span></div>
+        <div class="row"><span>Saylorville Lake Marina<em>Boating &amp; lake access</em></span><span>1.4 mi &middot; 3 min</span></div>
+        <div class="row"><span>Big Creek State Park<em>Beach, lake &amp; trails</em></span><span>5.0 mi &middot; 10 min</span></div>
+      </div>
+
+      <div class="group">
+        <h3><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v10h14V10M10 20v-6h4v6"/></svg>Schools</h3>
+        <div class="row"><span>North Polk West Elementary (PK&ndash;2)<em>1400 W Broadway St, Polk City</em></span><span>1.4 mi &middot; 4 min</span></div>
+        <div class="row"><span>Big Creek Elementary (3&ndash;5)<em>340 W Vista Lake Ave, Polk City</em></span><span>2.0 mi &middot; 6 min</span></div>
+        <div class="row"><span>North Polk Middle School (6&ndash;8)<em>315 NE 141st Ave, Alleman</em></span><span>8.9 mi &middot; 14 min</span></div>
+        <div class="row"><span>North Polk High School (9&ndash;12)<em>13930 NE 6th St, Alleman</em></span><span>9.1 mi &middot; 16 min</span></div>
+      </div>
+
+      <div class="group">
+        <h3><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>Attractions &amp; Entertainment</h3>
+        <div class="row"><span>Downtown Polk City<em>Shops &amp; restaurants around the square</em></span><span>0.6 mi &middot; ~13 min walk</span></div>
+        <div class="row"><span>Tournament Club of Iowa (TCI)<em>Golf course</em></span><span>1.5 mi &middot; 5 min</span></div>
+        <div class="row"><span>Downtown Des Moines<em>State Capitol</em></span><span>16.3 mi &middot; 29 min</span></div>
+        <div class="row"><span>Ames<em>Iowa State University / Jack Trice Stadium</em></span><span>21.3 mi &middot; 32 min</span></div>
+      </div>
+
+      <div class="group">
+        <h3><svg viewBox="0 0 24 24"><path d="M5 7h14l-1.5 12h-11zM9 7a3 3 0 016 0"/></svg>Shopping &amp; Travel</h3>
+        <div class="row"><span>Fareway<em>Groceries &mdash; 1101 S 5th St</em></span><span>0.4 mi &middot; 2 min</span></div>
+        <div class="row"><span>The District at Prairie Trail<em>Ankeny shopping &amp; dining</em></span><span>8.0 mi &middot; 14 min</span></div>
+        <div class="row"><span>Des Moines International Airport</span><span>26.7 mi &middot; 34 min</span></div>
+      </div>
+    </div>
+
+    <p class="note">School District: North Polk Community Schools. School assignments can change &mdash; buyers should confirm with the <a href="https://www.northpolk.org">North Polk district</a>. Drive times are from Google Maps in typical traffic and will vary.</p>
+    <p style="margin-top:22px"><a class="btn dark" href="https://www.google.com/maps/search/?api=1&query=806+Edgewater+Drive%2C+Polk+City%2C+IA+50226">Open in Google Maps</a></p>
+  </div>
+</section>
+
+<section class="alt" id="links">
+  <div class="wrap">
+    <div class="eyebrow">See It Online</div>
+    <h2>More ways to view this listing</h2>
+    <div class="links">
+      <a class="link" href="https://www.zillow.com/homedetails/806-Edgewater-Dr-Polk-City-IA-50226/68177654_zpid/">
+        <div><b>Zillow</b><br><small>Photos, payment estimate &amp; history</small></div><span>View on Zillow &rarr;</span>
+      </a>
+      <a class="link" href="https://katieriedeman.com/listing/IA/Polk-City/806-Edgewater-Drive-50226/236053079">
+        <div><b>Century 21</b><br><small>Full listing on KatieRiedeman.com</small></div><span>View on Century 21 &rarr;</span>
+      </a>
+      <a class="link" href="https://www.google.com/maps/dir/?api=1&destination=806+Edgewater+Drive%2C+Polk+City%2C+IA+50226">
+        <div><b>Map &amp; Directions</b><br><small>806 Edgewater Drive, Polk City, IA 50226</small></div><span>Get directions &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="agent" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Listed By</div>
+      <h2>Katie Riedeman</h2>
+      <p>REALTOR&reg; with CENTURY 21 Signature Real Estate. Questions about this home or want to see it in person? Reach out anytime &mdash; showings are scheduled through ShowingTime, and I'm happy to set one up for you.</p>
+      <div class="social">
+        <a href="https://www.instagram.com/katieriedeman.realtor/">Instagram</a>
+        <a href="https://www.facebook.com/KatieRiedemanCentury21">Facebook</a>
+        <a href="https://www.tiktok.com/@katieriedeman">TikTok</a>
+        <a href="https://linktr.ee/katieriedeman">All links</a>
+      </div>
+    </div>
+    <div class="contact">
+      <div><small>Call / Text</small><a href="tel:+15157083115">(515) 708-3115</a></div>
+      <div><small>Email</small><a href="mailto:Katie@c21sre.com?subject=806%20Edgewater%20Drive%2C%20Polk%20City">Katie@c21sre.com</a></div>
+      <div><small>Brokerage</small><span>CENTURY 21 Signature Real Estate</span></div>
+      <div class="cta">
+        <a class="btn" href="tel:+15157083115">Call Katie</a>
+        <a class="btn ghost" href="sms:+15157083115">Text to Schedule</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Katie Riedeman &middot; CENTURY 21 Signature Real Estate &middot; (515) 708-3115<br>
+    Information deemed reliable but not guaranteed and should be independently verified. Equal Housing Opportunity.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var photos=["exterior-8"];
+  for(var i=1;i<=31;i++) photos.push("interior-"+i);
+  photos=photos.concat(["exterior-2","exterior-3","exterior-1","exterior-4","exterior-5","exterior-6","exterior-7","exterior-9"]);
+  var SHOW=9, g=document.getElementById("gallery");
+  photos.forEach(function(p,i){
+    var b=document.createElement("button");
+    if(i===0) b.className="big";
+    if(i>=SHOW) b.classList.add("hide");
+    b.setAttribute("aria-label","Open photo "+(i+1));
+    var im=document.createElement("img");
+    im.src="img/"+p+".jpg"; im.loading="lazy"; im.alt="806 Edgewater Drive, Polk City photo "+(i+1);
+    b.appendChild(im); b.onclick=function(){open(i)}; g.appendChild(b);
+  });
+  document.getElementById("count").textContent=photos.length;
+  var more=document.getElementById("moreBtn");
+  more.onclick=function(){g.querySelectorAll(".hide").forEach(function(x){x.classList.remove("hide")});more.parentNode.style.display="none"};
+
+  var lb=document.getElementById("lb"), li=lb.querySelector("img"), ct=lb.querySelector(".ct"), cur=0;
+  function show(){li.src="img/"+photos[cur]+".jpg";ct.textContent=(cur+1)+" / "+photos.length}
+  function open(i){cur=i;show();lb.classList.add("open")}
+  function close(){lb.classList.remove("open")}
+  function step(d){cur=(cur+d+photos.length)%photos.length;show()}
+  lb.querySelector(".x").onclick=close;
+  lb.querySelector(".pv").onclick=function(e){e.stopPropagation();step(-1)};
+  lb.querySelector(".nx").onclick=function(e){e.stopPropagation();step(1)};
+  lb.onclick=function(e){if(e.target===lb)close()};
+  document.addEventListener("keydown",function(e){if(!lb.classList.contains("open"))return;if(e.key==="Escape")close();if(e.key==="ArrowLeft")step(-1);if(e.key==="ArrowRight")step(1)});
+  var sx=null;
+  lb.addEventListener("touchstart",function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener("touchend",function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)step(dx<0?1:-1);sx=null});
+})();
+</script>
+</body>
+</html>
